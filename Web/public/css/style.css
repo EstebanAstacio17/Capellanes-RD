@@ -1092,10 +1092,76 @@ textarea.form-control {
     .search-input-group input {
         height: 50px;
     }
-    .stat-number {
-        font-size: 2.5rem;
-    }
     .section-padding {
         padding: 65px 0;
     }
 }
+
+/* ==========================================
+   ESTILOS PARA CERTIFICACIÓN OFICIAL IMPRIMIBLE
+   ========================================== */
+.certificate-paper {
+    background: #FFFFFF;
+    border: 3px double var(--gold-primary);
+    box-shadow: 0 15px 40px rgba(11, 30, 61, 0.12);
+    padding: 40px 45px;
+    border-radius: 4px;
+    position: relative;
+    color: #1E293B;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.certificate-paper::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 1px solid var(--border-gold);
+    pointer-events: none;
+}
+
+.certificate-header-logo {
+    height: 75px;
+    width: auto;
+    object-fit: contain;
+}
+
+.certificate-seal-stamp {
+    border: 2px dashed var(--gold-primary);
+    background: rgba(201, 162, 39, 0.05);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    color: var(--gold-dark);
+    font-weight: 700;
+}
+
+/* Reglas de Impresión (@media print) */
+@media print {
+    body * {
+        visibility: hidden !important;
+    }
+    #printableCertificateArea,
+    #printableCertificateArea * {
+        visibility: visible !important;
+    }
+    #printableCertificateArea {
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 20px !important;
+        box-shadow: none !important;
+        border: 2px double #A37E15 !important;
+    }
+    .no-print {
+        display: none !important;
+    }
+}
+

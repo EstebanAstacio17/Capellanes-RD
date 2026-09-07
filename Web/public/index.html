@@ -231,7 +231,7 @@
                         <a class="nav-link active" href="#inicio">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#verificador">Verificar Carnet</a>
+                        <a class="nav-link" href="#verificador">Validar Certificación / Carnet</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#solicitud">Solicitudes</a>
@@ -383,35 +383,36 @@
         </div>
     </section>
 
-    <!-- 5. MÓDULO 1: VERIFICADOR PÚBLICO DE CREDENCIALES Y CARNETS -->
+    <!-- 5. MÓDULO 1: VERIFICADOR PÚBLICO DE CREDENCIALES Y CERTIFICACIONES OFICIALES -->
     <section id="verificador" class="verifier-section section-padding">
         <div class="container">
             <div class="text-center mb-5">
                 <span class="section-tag">SEGURIDAD Y TRANSPARENCIA INSTITUCIONAL</span>
-                <h2 class="section-title">Buscador y Verificador de Carnet de Capellán</h2>
+                <h2 class="section-title">Validador de Certificaciones y Carnets Oficiales</h2>
                 <p class="section-desc mx-auto">
-                    Herramienta pública oficial para autoridades hospitalarias, penitenciarias, judiciales, cuerpos castrenses y la ciudadanía en general para confirmar la acreditación de miembros activos en la República Dominicana.
+                    Herramienta pública oficial para embajadas, cuerpos consulares, autoridades judiciales, policiales, hospitalarias, penitenciarias y la ciudadanía para validar e imprimir certificados de miembros activos en la República Dominicana.
                 </p>
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-lg-8">
+                <div class="col-lg-9">
                     <div class="search-box-official">
                         <label for="inputSearchCarnet" class="form-label fw-bold mb-2">
-                            <i class="fa-solid fa-id-card text-gold me-1"></i> Ingrese el ID de Carnet Oficial o Número de Cédula:
+                            <i class="fa-solid fa-certificate text-gold me-1"></i> Ingrese el Código de Certificación, ID de Carnet o Cédula:
                         </label>
                         <div class="search-input-group">
                             <i class="fa-solid fa-magnifying-glass search-input-icon"></i>
-                            <input type="text" id="inputSearchCarnet" class="form-control" placeholder="Ej: DO-2026-OC-0015-9 o 001-1849204-3" aria-label="Número de carnet o cédula">
+                            <input type="text" id="inputSearchCarnet" class="form-control" placeholder="Ej: CERT-MDO-2026-00489, DO-2026-OC-0015-9 o 001-1849204-3" aria-label="Número de certificación, carnet o cédula">
                             <button id="btnSearchCarnet" class="btn btn-gold-custom px-4" type="button">
-                                <i class="fa-solid fa-check-to-slot"></i> Verificar
+                                <i class="fa-solid fa-check-to-slot"></i> Validar e Imprimir
                             </button>
                         </div>
                         <div class="d-flex justify-content-between align-items-center mt-3 flex-wrap gap-2">
                             <small class="text-muted">
                                 <i class="fa-solid fa-circle-info text-primary me-1"></i> Ejemplos demostrativos para consultar: 
-                                <span class="badge bg-light text-dark border cursor-pointer me-1" onclick="document.getElementById('inputSearchCarnet').value='DO-2026-OC-0015-9'">DO-2026-OC-0015-9</span>
-                                <span class="badge bg-light text-dark border cursor-pointer" onclick="document.getElementById('inputSearchCarnet').value='002-0049281-5'">002-0049281-5</span>
+                                <span class="badge bg-light text-dark border cursor-pointer me-1" onclick="document.getElementById('inputSearchCarnet').value='CERT-MDO-2026-00489'; document.getElementById('btnSearchCarnet').click();">CERT-MDO-2026-00489 (Certificación)</span>
+                                <span class="badge bg-light text-dark border cursor-pointer me-1" onclick="document.getElementById('inputSearchCarnet').value='DO-2026-OC-0015-9'; document.getElementById('btnSearchCarnet').click();">DO-2026-OC-0015-9 (Carnet)</span>
+                                <span class="badge bg-light text-dark border cursor-pointer" onclick="document.getElementById('inputSearchCarnet').value='002-0049281-5'; document.getElementById('btnSearchCarnet').click();">002-0049281-5</span>
                             </small>
                         </div>
                     </div>
@@ -1454,6 +1455,9 @@
             </div>
         </div>
     </div>
+
+    <!-- CONTENEDOR OCULTO PARA IMPRESIÓN OFICIAL (@media print) -->
+    <div id="printableCertificateArea" style="display: none;"></div>
 
     <!-- SCRIPTS JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
