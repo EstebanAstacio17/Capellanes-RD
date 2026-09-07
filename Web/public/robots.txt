@@ -1,0 +1,8 @@
+# Robots.txt - Ministerio de Capellanes de la República Dominicana (M.CA.RD.O. / MICARD)
+# https://capellanesrd-764f8.web.app/
+
+User-agent: *
+Allow: /
+
+# Directiva del Sitemap para Google, Bing y Yahoo
+Sitemap: https://capellanesrd-764f8.web.app/sitemap.xml

@@ -1,0 +1,26 @@
+{
+  "name": "Ministerio de Capellanes de la República Dominicana",
+  "short_name": "Capellanes RD",
+  "description": "Plataforma oficial de formación, acreditación, verificación de credenciales y solicitudes del Ministerio de Capellanes de la República Dominicana (M.CA.RD.O. / MICARD).",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#081A38",
+  "theme_color": "#1F4E8C",
+  "icons": [
+    {
+      "src": "img/Recurso 1100.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "img/Recurso 1100.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "img/Recurso 1100.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
